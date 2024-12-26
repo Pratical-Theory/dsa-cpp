@@ -1,0 +1,10 @@
+# Ignore all files
+*
+
+# But not these extensions
+!*.md
+!*.cpp
+!.gitignore
+
+# Allow directories to be traversed
+!*/

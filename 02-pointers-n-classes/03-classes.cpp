@@ -9,7 +9,7 @@ private:
     string color;
 
 public:
-    Cookie(string color)
+    Cookie(string color) 
     {
         this->color = color;
     }

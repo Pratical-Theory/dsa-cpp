@@ -18,9 +18,12 @@ int main()
     i = 10;
 
     cout << "*ptr = " << *ptr << endl;
+    cout << "*ptr = " << ptr << endl;
+    cout << "ptr address= " << &ptr << endl;
     cout << "&ref = " << ref << endl;
     cout << "value = " << value << endl;
     cout << "i  = " << i << endl;
+    cout << "i address= " << &i << endl;
 
     // Explanation:
     // ref is a reference to i, meaning it is an alias for i. 

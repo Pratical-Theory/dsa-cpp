@@ -46,7 +46,8 @@ Quadratic time complexity, where the runtime grows proportionally to the square 
 Constant time complexity, where the runtime is independent of the input size.
 
 ### O(log n) - divide and conquer
-Cuts the problem size in half each step. For example, log base 2 of 1,073,741,824 is 31, meaning we cut in half 31 times to find the desired number.
+Cuts the problem size in half each step. For example, log base 2 of 1,073,741,824 is 307
+w78f, meaning we cut in half 31 times to find the desired number.
 
 ### O(n log n) - efficient sorting
 Common in efficient sorting algorithms like merge sort and quick sort when the data is not ordered.

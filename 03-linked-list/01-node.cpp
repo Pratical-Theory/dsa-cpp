@@ -85,40 +85,24 @@ public:
 
     void deleteLast()
     {
-
-        // when there nothing
+        if (length == 0)
+            return;
+        Node *temp = head;
+        Node *pre = head;
+        while (temp->next)
+        {
+            pre = temp;
+            temp = temp->next;
+        }
+        tail = pre;
+        tail->next = nullptr;
+        length--;
         if (length == 0)
         {
+            head = nullptr;
+            tail = nullptr;
         }
-        cout << "hii" << length << endl;
-
-        // when we have == 1
-        if (length == 1)
-        {
-            delete head;
-            length--;
-        }
-
-        // when we have > 1
-        if (length > 1)
-        {
-            cout << "hii" << endl;
-            Node *secondToLast;
-            Node *temp = head;
-            while (temp)
-            {
-                if (!temp->next)
-                {
-                    secondToLast = temp;
-                    break;
-                }
-                temp = temp->next;
-            }
-            delete tail;
-            tail = secondToLast;
-            cout << "val: " << secondToLast->next->value << endl;
-            length--;
-        }
+        delete temp;
     }
 
     void insert(int value)

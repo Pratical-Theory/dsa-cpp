@@ -83,6 +83,44 @@ public:
         length++;
     }
 
+    void deleteLast()
+    {
+
+        // when there nothing
+        if (length == 0)
+        {
+        }
+        cout << "hii" << length << endl;
+
+        // when we have == 1
+        if (length == 1)
+        {
+            delete head;
+            length--;
+        }
+
+        // when we have > 1
+        if (length > 1)
+        {
+            cout << "hii" << endl;
+            Node *secondToLast;
+            Node *temp = head;
+            while (temp)
+            {
+                if (!temp->next)
+                {
+                    secondToLast = temp;
+                    break;
+                }
+                temp = temp->next;
+            }
+            delete tail;
+            tail = secondToLast;
+            cout << "val: " << secondToLast->next->value << endl;
+            length--;
+        }
+    }
+
     void insert(int value)
     {
         Node *newNode = new Node(value);
@@ -105,6 +143,8 @@ int main()
     LinkedList *list = new LinkedList(3);
     list->append(5);
     list->append(10);
+    list->append(20);
+    list->deleteLast();
 
     list->printList();
     // list->getHead();
